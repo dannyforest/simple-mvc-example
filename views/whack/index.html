@@ -1,0 +1,39 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Whack-a-mole</title>
+</head>
+<body>
+  <div>
+    <h2 id="counter">Clicks: 0</h2>
+    <button
+      onclick="controller.reset()"
+    >
+      Reset
+    </button>
+
+    <div
+      id="object"
+      class="hidden"
+      style="background-color: orange; position: absolute; width: 100px; height: 100px;"
+      onclick="controller.whack()"
+    >
+
+    </div>
+  </div>
+
+</div>
+<link rel="stylesheet" href="../../css/style.css" />
+<script src="../../js/controllers/WhackController.js"></script>
+<script src="../../js/models/WhackModel.js"></script>
+<script type="text/javascript">
+  const controller = new WhackController(new WhackModel());
+
+  setInterval(() => {
+    controller.displayObject();
+  }, 3000);
+</script>
+</body>
+</html>
