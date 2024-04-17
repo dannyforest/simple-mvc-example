@@ -1,0 +1,19 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple MVC Example</title>
+</head>
+<body>
+<ul id="itemList"></ul>
+<input type="text" id="newItem" placeholder="Add a new item" />
+<button onclick="controller.addItem()">Add Item</button>
+
+<script src="../../js/controllers/ItemsController.js"></script>
+<script src="../../js/models/ItemModel.js"></script>
+<script type="text/javascript">
+  const controller = new ItemController(new ItemModel());
+</script>
+</body>
+</html>
